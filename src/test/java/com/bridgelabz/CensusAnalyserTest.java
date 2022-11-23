@@ -6,15 +6,15 @@ import org.junit.jupiter.api.Test;
 import org.junit.rules.ExpectedException;
 
 public class CensusAnalyserTest {
-    private static final String INDIA_CENSUS_CSV_FILE_PATH = "E:\\BridgeLabz\\RFP\\Day29CensusAnalyser\\IndiaStateCensusData.csv";
+    private static final String INDIA_STATE_CODE_CSV_FILE_PATH = "E:\\BridgeLabz\\RFP\\Day29CensusAnalyser\\IndiaStateCode.csv";
     private static final String WRONG_CSV_FILE_PATH = "./src/main/resources/IndiaStateCensusData.csv";
 
     @Test
     public void givenIndianCensusCSVFileReturnsCorrectRecords() {
         try {
             CensusAnalyser censusAnalyser = new CensusAnalyser();
-            int numOfRecords = censusAnalyser.loadIndiaCensusData(INDIA_CENSUS_CSV_FILE_PATH);
-            Assertions.assertEquals(29,numOfRecords);
+            int numOfRecords = censusAnalyser.loadIndiaCensusData(INDIA_STATE_CODE_CSV_FILE_PATH);
+            Assertions.assertEquals(37,numOfRecords);
         } catch (CensusAnalyserException e) { }
     }
 
